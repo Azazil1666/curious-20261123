@@ -4,7 +4,7 @@ import { join } from 'path';
 const OUTPUT_DIR = process.env.OUTPUT_DIR || '/output';
 const OUTPUT_FILE = join(OUTPUT_DIR, 'entry.txt');
 
-const TEXT = 'Each dawn a crow drops a polished stone into the rain barrel. The water remembers.';
+const TEXT = 'A letter arrives each spring addressed to a woman who moved away in 1962. Someone always answers it.';
 
 function main(): void {
   if (!existsSync(OUTPUT_DIR)) {
