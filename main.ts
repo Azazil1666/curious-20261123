@@ -1,0 +1,16 @@
+import { writeFileSync, mkdirSync, existsSync } from 'fs';
+import { join } from 'path';
+
+const OUTPUT_DIR = process.env.OUTPUT_DIR || '/output';
+const OUTPUT_FILE = join(OUTPUT_DIR, 'entry.txt');
+
+const TEXT = 'Each dawn a crow drops a polished stone into the rain barrel. The water remembers.';
+
+function main(): void {
+  if (!existsSync(OUTPUT_DIR)) {
+    mkdirSync(OUTPUT_DIR, { recursive: true });
+  }
+  writeFileSync(OUTPUT_FILE, TEXT, 'utf-8');
+}
+
+main();
